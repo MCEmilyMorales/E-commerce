@@ -2,15 +2,15 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 import { config as dotenvConfig } from 'dotenv';
 import { registerAs } from '@nestjs/config';
 
-dotenvConfig({ path: '.development.env' });
+dotenvConfig({ path: '.env' });
 
 const config = {
   type: 'postgres',
-  database: process.env.DATA_BASE,
-  host: process.env.HOST,
-  port: process.env.PORT as unknown as number,
-  password: process.env.PASSWORD,
-  username: 'postgres',
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT),
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  username: process.env.DB_USERNAME,
   autoLoadEntities: true,
   synchronize: true,
   logging: true,
@@ -20,5 +20,5 @@ const config = {
   // migrations: [__dirname + 'dist/migrations/*{.ts,.js}'],
   //dropSchema:true,
 };
-export default registerAs('typeorm', () => config); //permite tener una clave con el nombre de typeORM e importar el objeto config
-export const connectionSource = new DataSource(config as DataSourceOptions);
+export const typeOrmConfig = registerAs('typeorm', () => config); // registra en la configuracion de nest este objeto de'config'
+export const connectionSource = new DataSource(config as DataSourceOptions); // configura de parte de typeorm este objeto de config y le da el nombre de DataSourceOptions para toda la app
