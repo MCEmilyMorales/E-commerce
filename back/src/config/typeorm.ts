@@ -13,12 +13,12 @@ const config = {
   username: process.env.DB_USERNAME,
   autoLoadEntities: true,
   synchronize: true,
-  logging: true,
+  //  logging: true,
   //entities: ['dist/**/*.entity{.ts,.js}'],
   //migrations: ['dist/migrations/*{.ts,.js}'],
   // entities: [__dirname + '/../**/*.entity{.ts,.js}'],
   // migrations: [__dirname + 'dist/migrations/*{.ts,.js}'],
-  //dropSchema:true,
+  //dropSchema: true,
 };
 export const typeOrmConfig = registerAs('typeorm', () => config); // registra en la configuracion de nest este objeto de'config'
 export const connectionSource = new DataSource(config as DataSourceOptions); // configura de parte de typeorm este objeto de config y le da el nombre de DataSourceOptions para toda la app

@@ -8,11 +8,13 @@ import { OrderDetailsModule } from './orderDetails/orderDetails.module';
 import { OrdersModule } from './orders/orders.module';
 import { FileUploadModule } from './file-upload/fileUpload.module';
 import { JwtModule } from '@nestjs/jwt';
+import { EventEmitter2 } from '@nestjs/event-emitter';
 
 @Module({
   imports: [
     configModule,
     databaseConfig,
+    EventEmitter2,
     UsersModule,
     CategoriesModule,
     ProductsModule,
@@ -21,10 +23,10 @@ import { JwtModule } from '@nestjs/jwt';
     OrdersModule,
     FileUploadModule,
     JwtModule.register({
-      global:true,
-      signOptions: { expiresIn: '1h'},
+      global: true,
+      signOptions: { expiresIn: '1h' },
       secret: process.env.JWT_SECRET,
-    })
+    }),
   ],
   controllers: [],
   providers: [],
