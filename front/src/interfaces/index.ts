@@ -69,3 +69,9 @@ export interface IOrderId {
   user_id: IRegisterUserResponse;
   orderDetails: IOrderDetails;
 }
+export interface IButtonProps {
+  text: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+  className?: string;
+}
