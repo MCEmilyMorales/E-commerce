@@ -1,3 +1,5 @@
+import { execOnce } from "next/dist/shared/lib/utils";
+
 //* registro de usuario que enviamos *
 export interface IRegisterUser {
   name: string;
@@ -50,12 +52,15 @@ export interface IProduct {
   id: string;
   name: string;
   description: string;
-  price: string;
+  price: number;
   stock: number;
   imgUrl: string;
   category: string;
 }
 
+export interface IProductListProps {
+  products: IProduct[];
+}
 //* Datos de tabla de OrderDetails *
 export interface IOrderDetails {
   id: string;

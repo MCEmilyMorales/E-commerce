@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import CustomButton from "@/components/CustomButton";
+import Navbar from "../components/Navbar";
+import CustomButton from "../components/CustomButton";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
