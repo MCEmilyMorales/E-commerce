@@ -8,7 +8,7 @@ export const productsToPreload: IProduct[] = [
     price: 199.99,
     stock: 12,
     category: "smartphone",
-    imgUrl: "/images/banda.png",
+    imgUrl: "/images/frutas.png",
   },
   {
     id: "2",
@@ -26,7 +26,7 @@ export const productsToPreload: IProduct[] = [
     price: 179.89,
     stock: 12,
     category: "smartphone",
-    imgUrl: "/images/banda.png",
+    imgUrl: "/images/color.png",
   },
   {
     id: "4",
@@ -35,7 +35,7 @@ export const productsToPreload: IProduct[] = [
     price: 299.99,
     stock: 12,
     category: "monitor",
-    imgUrl: "/images/banda.png",
+    imgUrl: "/images/ropa.webp",
   },
   {
     id: "5",
@@ -44,7 +44,7 @@ export const productsToPreload: IProduct[] = [
     price: 199.99,
     stock: 12,
     category: "monitor",
-    imgUrl: "/images/banda.png",
+    imgUrl: "/images/ropad.jpeg",
   },
   {
     id: "6",

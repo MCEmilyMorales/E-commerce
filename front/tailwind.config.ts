@@ -9,10 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        customColor: {
+          DEFAULT: "#D9857E", // El color base
+          light: "#E7AAA6", // Tonalidad más clara, puedes ajustarla
+          dark: "#C1645A",
+        },
       },
     },
+    //personalizo las propiedades de tailwind ej color
   },
   plugins: [],
 };
