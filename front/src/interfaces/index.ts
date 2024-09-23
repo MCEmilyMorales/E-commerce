@@ -80,3 +80,10 @@ export interface IButtonProps {
   disabled?: boolean;
   className?: string;
 }
+
+//* Boton *
+export interface ButtonProps {
+  text: string;
+  onClick: () => void;
+  className?: string;
+}
