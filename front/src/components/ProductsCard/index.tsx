@@ -15,28 +15,27 @@ export default function ProductCard({ product }: { product: IProduct }) {
     return <div>Producto no disponible</div>;
   }
   return (
-    <div className="mx-5 my-5 w-72 relative">
-      <div className="flex justify-center items-center h-96 overflow-hidden">
+    <div className="mx-5 my-5 w-[400px] grid grid-rows-subgrid(3,1fr) justify-items-center gap-2">
+      <div className="flex justify-items-center h-[600px] overflow-hidden hover:cursor-zoom-in">
         <Image
           src={product.imgUrl}
           alt={product.name}
-          height={386}
-          width={290}
+          height={600}
+          width={400}
+          className="object-cover transform transition duration-500 hover:scale-110"
         />
       </div>
       <div className="pt-6">
         <h2 className="text-xl font-bold">{product.name}</h2>
       </div>
-      <div className="flex justify-between">
-        <span className="block text text-left">Precio: </span>
-        <span className="block text-lg text-right font-bold">
-          ${product.price}
-        </span>
+      <div className="flex">
+        <span>Precio: </span>
+        <span className="text-lg font-bold">${product.price}</span>
       </div>
-      <div>
-        <p className="py-2 text-left bg-gray-300">{product.description}</p>
+      <div className="min-w-full">
+        <p className="p-2 text-left bg-gray-300">{product.description}</p>
       </div>
-      <div className="py-2 flex justify-center items-center">
+      <div className=" min-w-full py-2 flex justify-center items-center">
         <Button text="ADD" onClick={handleAddToCart} />
       </div>
     </div>
