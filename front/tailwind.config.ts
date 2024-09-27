@@ -17,6 +17,9 @@ const config: Config = {
           dark: "#C1645A",
         },
       },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
     },
     //personalizo las propiedades de tailwind ej color
   },
