@@ -5,7 +5,7 @@ export default function SearchInput() {
     <div className="relative">
       <div className="absolute -right-2 w-[2rem] h-[2rem] flex items-start justify-end cursor-pointer"></div>
       <svg
-        xmlns="/images/search.svg"
+        xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5 absolute right-3 top-1/2 transform -translate-y-1/2"
         fill="none"
         viewBox="0 0 24 24"
@@ -22,7 +22,7 @@ export default function SearchInput() {
       <input
         type="text"
         placeholder="Buscar"
-        className="w-full pr-10 pl-4 py-1 border border-black bg-white outline-none rounded-xl focus:ring-0 focus:border-customColor"
+        className="w-full pr-10 pl-4 py-1 border border-black bg-white outline-none rounded-xl focus:ring-0 focus:border-black"
       />
     </div>
   );
