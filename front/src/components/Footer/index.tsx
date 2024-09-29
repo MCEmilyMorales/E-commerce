@@ -4,7 +4,10 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer>
-      <div className="flex h-28 w-full px-10 py-5 bg-gray-300 justify-between items-center">
+      <div
+        className="flex h-28 w-full px-10 py-5 justify-between items-center"
+        style={{ boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)" }}
+      >
         <div className="flex h-9 px-2 font-black items-center">
           <span>Andia</span>
         </div>

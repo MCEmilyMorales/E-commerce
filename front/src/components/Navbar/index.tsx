@@ -1,17 +1,18 @@
 import Home from "@/app/home/page";
 import SearchInput from "../SearchInput";
+import Image from "next/image";
 
 export default function ComponentNavbar() {
   return (
     <nav>
-      <div className="border border-black p-4 h-20 mx-auto flex items-center justify-around">
+      <div className="p-4 h-20 mx-auto flex items-center justify-around border border-b-2 shadow-md ">
         <div className="text-black text-lg font-bold pr-10">
           <h1 className="font-black">
             <a href="/">Andia</a>
           </h1>
         </div>
 
-        <ul className="flex place-items-center ">
+        <ul className="flex place-items-center">
           <li className="px-10">
             <a href={"/promociones"}>Promociones</a>
           </li>
@@ -20,14 +21,39 @@ export default function ComponentNavbar() {
 
         <div>
           <ul className="flex place-items-center justify-between">
-            <li className="px-10">
-              <a href={"/home"}>Home</a>
+            <li className="px-10 flex place-items-center">
+              <a href={"/home"} className="flex">
+                Home
+                <Image
+                  src={"/images/home_85808.svg"}
+                  alt={"home"}
+                  width={24}
+                  height={24}
+                  className="ml-1 stroke-2"
+                />
+              </a>
             </li>
             <li className="px-10">
-              <a href={"/cuenta/login"}>Registrar o ingresar</a>
+              <a href={"/cuenta/login"} className="flex">
+                Registrar o ingresar
+                <Image
+                  src={"/images/account.svg"}
+                  alt={"cuenta"}
+                  width={24}
+                  height={24}
+                />
+              </a>
             </li>
-            <li className="pl-10">
-              <a href={"/cart"}>Carrito</a>
+            <li className="flex pl-10">
+              <a href={"/cart"} className="flex">
+                Carrito
+                <Image
+                  src={"/images/shoppingbag_84031.svg"}
+                  alt={"carrito"}
+                  width={24}
+                  height={24}
+                />
+              </a>
             </li>
             <li></li>
           </ul>
