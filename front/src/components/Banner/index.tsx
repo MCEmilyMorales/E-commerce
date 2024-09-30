@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Banner() {
   return (
-    <div className="border border-black w-full flex flex-wrap justify-center">
+    <div className="w-full flex flex-wrap justify-center">
       <Image
         src={
           "https://assets.hermes.com/is/image/hermesedito/P_169_BARENIA_PS_HP?fit=wrap%2C0&wid=1920"
