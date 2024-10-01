@@ -53,9 +53,9 @@ export default function LognIn() {
               <input
                 type="checkbox"
                 id="remember"
-                className=" h-4 w-4 rounded border border-gray-300 text-indigo-600 focus:ring-indigo-500
+                className=" h-4 w-4 rounded border border-gray-300 text-customColor focus:ring-customColor-light
                 focus:outline-none"
-                checked
+                defaultChecked={true}
               />
               <label
                 htmlFor="remember"
@@ -66,11 +66,11 @@ export default function LognIn() {
             </div>
             <a
               href="#"
-              className="text-xs text-indigo-500 focus:text-indigo-700
+              className="text-xs text-customColor focus:text-customColor-dark
             focus:outline-none
             focus:ring-2
             focus:ring-offset-2
-            focus:ring-indigo-500"
+            focus:ring-customColor-light"
             >
               {" "}
               Create Account
